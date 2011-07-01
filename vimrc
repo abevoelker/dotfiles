@@ -11,6 +11,7 @@ filetype plugin on    " Enable filetype-specific plugins
 
 " My own custom garbage here
 color wombat
+set guifont=Consolas\ 10 " Don't forget to pull in from ~/.fonts
 set number       " Enable line numbers
 set shiftwidth=2 " Indent lines by 2 spaces
 set autoindent
