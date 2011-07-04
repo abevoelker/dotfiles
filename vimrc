@@ -19,6 +19,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set hidden
 
 " Keep backup/swap garbage out of working dir
 set backupdir=~/.vimbackup,/tmp
