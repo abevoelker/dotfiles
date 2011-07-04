@@ -2,8 +2,8 @@
 # See LICENSE_ryanb for full license text
 
 [user]
-	name = Abe Voelker
-	email = abe@abevoelker.com
+  name = Abe Voelker
+  email = abe@abevoelker.com
 [alias]
   s = status
   a = add
@@ -13,17 +13,17 @@
   d = diff
   di = diff --cached
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = gvim -f
-	autocrlf = input
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = gvim -f
+  autocrlf = input
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
-	user = abevoelker
-	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+  user = abevoelker
+  token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
