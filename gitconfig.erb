@@ -14,6 +14,13 @@
   di = diff --cached
 [color]
   ui = auto
+[color "status"]
+  header = normal
+  added = bold green
+  changed = red
+  untracked = cyan
+  branch = bold green
+  nobranch = bold red
 [core]
   excludesfile = <%= ENV['HOME'] %>/.gitignore
   editor = gvim -f
