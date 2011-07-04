@@ -5,6 +5,8 @@
 	name = Abe Voelker
 	email = abe@abevoelker.com
 [alias]
+  s = status
+  a = add
 	co = checkout
 [color]
 	diff = auto
@@ -12,7 +14,7 @@
 	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate_wait
+	editor = gvim -f
 	autocrlf = input
 [apply]
 	whitespace = nowarn
