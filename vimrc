@@ -10,6 +10,7 @@ filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
 " My own custom garbage here
+set t_Co=256
 color wombat
 set guifont=Consolas\ 10 " Don't forget to pull in from ~/.fonts
 set number       " Enable line numbers
