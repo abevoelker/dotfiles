@@ -25,6 +25,12 @@
   excludesfile = <%= ENV['HOME'] %>/.gitignore
   editor = gvim -f
   autocrlf = input
+[mergetool "gvimdiff3"]
+  cmd = gvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[mergetool "vimdiff3"]
+  cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[merge]
+  tool = gvimdiff3
 [apply]
   whitespace = nowarn
 [format]
