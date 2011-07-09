@@ -19,7 +19,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}%B✘%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[red]%}!%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
 
-# ⌘
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}◑"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖"
@@ -33,8 +32,6 @@ function git_prompt_info2() {
   "$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-# %F{208}
-# %F{124}
 # To change box style, see Unicode 'Box Drawing' code chart
 PROMPT='┏╸%{$fg_bold[blue]%}$(git_prompt_info2)%B%F{208}%~%b%{$reset_color%}%f
 ┗╸%{$fg_bold[white]%}$(prompt_char λ \#)%{$reset_color%} '
