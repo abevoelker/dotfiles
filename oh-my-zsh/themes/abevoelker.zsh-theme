@@ -26,11 +26,15 @@ function prompt_char {
   fi
 }
 
+function git_prompt_status_w_space {
+  [[ -n $(git_prompt_status) ]] && echo " "$(git_prompt_status)
+}
+
 # Overrides function in lib/git.zsh
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/} $(parse_git_dirty)" \
-  "$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/} $(parse_git_dirty)"\
+"$(git_prompt_status_w_space)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # To change box style, see Unicode 'Box Drawing' code chart
