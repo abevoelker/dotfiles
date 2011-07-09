@@ -26,14 +26,15 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[cyan]%}☔"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%F{197}⇅"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{135}⚑"
 
-function git_prompt_info2() {
+# Overrides function in lib/git.zsh
+function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/} $(parse_git_dirty)" \
   "$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # To change box style, see Unicode 'Box Drawing' code chart
-PROMPT='┏╸%{$fg_bold[blue]%}$(git_prompt_info2)%B%F{208}%~%b%{$reset_color%}%f
+PROMPT='┏╸%{$fg_bold[blue]%}$(git_prompt_info)%B%F{208}%~%b%{$reset_color%}%f
 ┗╸%{$fg_bold[white]%}$(prompt_char λ \#)%{$reset_color%} '
 RPROMPT='%B%F{208}%n%f%{$fg_bold[white]%}@%F{039}%m %F{135}%y%f%{$reset_color%}'
 
