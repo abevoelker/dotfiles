@@ -2,13 +2,6 @@
 # i.e TERM=xterm-256color
 # Color scheme based on sporty_256 theme
 
-# Yields absolute paths *except* off home dir (uses ~), e.g.
-# /tmp/somedir/
-# ~/Downloads (NOT /home/abe/Downloads)
-function path_shorten_home {
-	print ${PWD/~/"~"}
-}
-
 # Prints a special char depending on if you are root or regular user
 function prompt_char {
 	if [[ $UID -eq 0 ]]; then
