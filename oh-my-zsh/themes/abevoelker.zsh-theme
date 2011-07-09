@@ -2,15 +2,6 @@
 # i.e TERM=xterm-256color
 # Color scheme based on sporty_256 theme
 
-# Prints a special char depending on if you are root or regular user
-function prompt_char {
-	if [[ $UID -eq 0 ]]; then
-		print $2 # Print root prompt
-	else
-		print $1 # Print user prompt
-	fi
-}
-
 GIT_PROMPT_SEPARATOR="%F{154}|%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{154}±%{$GIT_PROMPT_SEPARATOR%}"
@@ -25,6 +16,15 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[cyan]%}☔"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%F{197}⇅"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{135}⚑"
+
+# Prints a special char depending on if you are root or regular user
+function prompt_char {
+  if [[ $UID -eq 0 ]]; then
+    print $2 # Print root prompt
+  else
+    print $1 # Print user prompt
+  fi
+}
 
 # Overrides function in lib/git.zsh
 function git_prompt_info() {
