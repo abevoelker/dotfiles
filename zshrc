@@ -30,6 +30,7 @@ alias mkdir='nocorrect mkdir'
 alias spec='nocorrect spec'
 alias rspec='nocorrect rspec'
 alias tmux='nocorrect tmux'
+alias spotify='nohup wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe >/dev/null 2>&1 &'
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
