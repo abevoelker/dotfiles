@@ -1,4 +1,9 @@
 
+" Load Tim Pope's pathogen script for easier plugin management
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
 " Override default bd with Kwbd plugin to preserve window
 cnoreabbrev bd Kwbd
 
