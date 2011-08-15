@@ -8,6 +8,9 @@ EXCLUDED_FILES = %w[Rakefile README.rdoc LICENSE]
 
 desc "install the dot files into user's home directory"
 task :install do
+  puts "Populating submodules..."
+  system %{git submodule init && git submodule update}
+
   replace_all = false
   Dir['*'].each do |file|
     next if EXCLUDED_FILES.include? file
