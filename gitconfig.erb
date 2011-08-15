@@ -12,6 +12,9 @@
   co = checkout
   d = diff
   di = diff --cached
+  ignore = !git update-index --assume-unchanged
+  unignore = !git update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 [color]
   ui = auto
 [color "status"]
