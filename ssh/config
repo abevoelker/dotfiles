@@ -8,5 +8,3 @@ Host *
   # Share ssh connections to improve performance
   ControlMaster auto
   ControlPath ~/.ssh_mux_%h_%p_%r
-  # Being able to use GUI apps over SSH is nice
-  ForwardX11 yes
