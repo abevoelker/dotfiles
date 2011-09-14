@@ -15,6 +15,9 @@
   ignore = !git update-index --assume-unchanged
   unignore = !git update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+# Set git-pull to use rebase by default (I'm aware of the danger)
+[branch]
+  autosetuprebase = always
 [color]
   ui = auto
 [color "status"]
