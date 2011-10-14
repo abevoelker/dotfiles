@@ -23,13 +23,8 @@ plugins=(git rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
-# Spell correction can be annoying for some apps
-alias mv='nocorrect mv'
-alias cp='nocorrect cp'
-alias mkdir='nocorrect mkdir'
-alias spec='nocorrect spec'
-alias rspec='nocorrect rspec'
-alias tmux='nocorrect tmux'
+# Spell correction annoys me (I'm a decent speller)
+unsetopt correct_all
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
