@@ -26,6 +26,16 @@ source $ZSH/oh-my-zsh.sh
 # Spell correction annoys me (I'm a decent speller)
 unsetopt correct_all
 
+# Global aliases (needn't start at beginning of line)
+alias -g NUL="> /dev/null 2>&1"
+alias -g ENUL="2> /dev/null"
+
+# Aliases
+alias f='find . -name'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+alias gitk='gitk --all'
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
