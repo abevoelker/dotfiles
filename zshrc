@@ -36,6 +36,35 @@ alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 alias gitk='gitk --all'
 
+# By @ieure; copied from https://gist.github.com/1474072
+#
+# It finds a file, looking up through parent directories until it finds one.
+# Use it like this:
+#
+#   $ ls .tmux.conf
+#   ls: .tmux.conf: No such file or directory
+#
+#   $ ls `up .tmux.conf`
+#   /Users/grb/.tmux.conf
+#
+#   $ cat `up .tmux.conf`
+#   set -g default-terminal "screen-256color"
+#
+function up()
+{
+    if [ "$1" != "" -a "$2" != "" ]; then
+        local DIR=$1
+        local TARGET=$2
+    elif [ "$1" ]; then
+        local DIR=$PWD
+        local TARGET=$1
+    fi
+    while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
+        DIR=$(dirname $DIR)
+    done
+    test $DIR != "/" && echo $DIR/$TARGET
+}
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
