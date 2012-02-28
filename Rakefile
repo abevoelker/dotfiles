@@ -3,6 +3,7 @@
 
 require 'rake'
 require 'erb'
+require 'fileutils'
 
 EXCLUDED_FILES = %w[Rakefile README.rdoc LICENSE]
 
@@ -38,6 +39,12 @@ task :install do
       link_file(file)
     end
   end
+
+  # Make ~/bin symlinks
+  user_bin = File.join(ENV['HOME'], 'bin')
+  FileUtils.mkdir user_bin unless File.exists? user_bin
+  # vless
+  system %Q{ln -s "/usr/share/vim/vim73/macros/less.sh" "$HOME/bin/vless"}
 end
 
 def replace_file(file)
