@@ -27,6 +27,13 @@ set shiftwidth=2
 set expandtab
 set hidden
 
+" Better split navigation
+" Taken from http://vimbits.com/bits/10
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Keep backup/swap garbage out of working dir
 set backupdir=~/.vimbackup,/tmp
 set directory=~/.vimswap,/tmp
