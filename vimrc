@@ -39,6 +39,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set hidden
+set pastetoggle=<F2> " F2 for pasting without auto-indent
 
 " Better split navigation
 " Taken from http://vimbits.com/bits/10
