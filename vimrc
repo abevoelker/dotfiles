@@ -1,14 +1,26 @@
+set nocompatible      " We're running Vim, not Vi!
+filetype off
+
+" Use Vundle to manage plugins
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" My Vundles here:
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'kien/ctrlp.vim.git'
 
 " Load Tim Pope's pathogen script for easier plugin management
-filetype off
 call pathogen#runtime_append_all_bundles()
+
+" Post-plugin stuff here:
 filetype plugin indent on
 
 " Override default bd with Kwbd plugin to preserve window
 cnoreabbrev bd Kwbd
 
 " Enable Ruby Extensions
-set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
