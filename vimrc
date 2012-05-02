@@ -14,6 +14,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/csapprox'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'rgarver/Kwbd.vim'
 
 " Post-plugin stuff here:
 filetype plugin indent on
