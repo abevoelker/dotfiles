@@ -1,7 +1,9 @@
 # Just to force some apps to use color
 export TERM=xterm-256color
 
-export PATH=/home/abe/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+# Set paths
+export PATH=~/bin:$PATH
+export CLASSPATH=~/java
 
 # Load scala interpreter
 if [ -d "$HOME/scala-2.9.0.1/bin" ] ; then
