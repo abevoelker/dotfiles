@@ -1,7 +1,7 @@
 # `man ssh_config` for the full list of options
 
 Host abevoelker.com
-  User abevoelker
+  User abe
 
 # Global options go below here
 Host *
