@@ -1,5 +1,4 @@
-# Original pre-modified file is copyright Ryan Bates
-# See LICENSE_ryanb for full license text
+# Based on Ryan Bates's original @ https://github.com/ryanb/dotfiles
 
 require 'rake'
 require 'erb'
