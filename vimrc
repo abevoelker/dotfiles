@@ -24,6 +24,8 @@ filetype plugin indent on
 
 " Override default bd with Kwbd plugin to preserve window
 cnoreabbrev bd Kwbd
+" Ignore annoying CSApprox warning when GUI support not available
+let g:CSApprox_verbose_level = 0
 
 " Enable Ruby Extensions
 syntax on             " Enable syntax highlighting
