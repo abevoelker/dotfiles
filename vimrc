@@ -15,6 +15,9 @@ Bundle 'godlygeek/csapprox'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'rgarver/Kwbd.vim'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 " Post-plugin stuff here:
 filetype plugin indent on
