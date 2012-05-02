@@ -13,6 +13,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/csapprox'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'kchmck/vim-coffee-script'
 
 " Load Tim Pope's pathogen script for easier plugin management
 call pathogen#runtime_append_all_bundles()
