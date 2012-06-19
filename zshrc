@@ -12,23 +12,22 @@ fi
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 export ZSH_THEME="abevoelker"
+# Don't auto-update oh-my-zsh (really annoying)
+export DISABLE_AUTO_UPDATE=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby)
 
+source $ZSH/oh-my-zsh.sh
+
 RVM_DEFAULT=ruby-1.9.3-p194@home
 if [ -x ~/.rvm/bin/rvm-prompt ] && [ "$(~/.rvm/bin/rvm-prompt)" != $RVM_DEFAULT ] ; then
   rvm use $RVM_DEFAULT
 fi
-
-source $ZSH/oh-my-zsh.sh
 
 # Spell correction annoys me (I'm a decent speller)
 unsetopt correct_all
