@@ -1,4 +1,5 @@
 ssh/id*
 ssh/known_hosts
+ssh/authorized_keys*
 weechat/logs
 weechat/*.log
