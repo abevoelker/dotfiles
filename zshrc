@@ -23,6 +23,11 @@ export ZSH_THEME="abevoelker"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby)
 
+RVM_DEFAULT=ruby-1.9.3-p194@home
+if [ -x ~/.rvm/bin/rvm-prompt ] && [ "$(~/.rvm/bin/rvm-prompt)" != $RVM_DEFAULT ] ; then
+  rvm use $RVM_DEFAULT
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Spell correction annoys me (I'm a decent speller)
@@ -66,7 +71,3 @@ function up()
     done
     test $DIR != "/" && echo $DIR/$TARGET
 }
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
