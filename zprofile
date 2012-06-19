@@ -1,3 +1,3 @@
-f [ -f ~/.zshrc ]; then
+if [ -f ~/.zshrc ]; then
   source ~/.zshrc
 fi
